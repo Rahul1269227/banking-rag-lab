@@ -44,3 +44,9 @@ This repo is designed as a lightweight retrieval demo. Build a JSON index from t
 - Uses only dummy sample specs
 - Does not call external APIs
 - Does not require a vector database or credentials
+
+## March 2026 Refresh
+
+- Public-safe packaging reviewed
+- Retrieval flow re-validated
+- Repository metadata and documentation polished
