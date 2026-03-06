@@ -1,13 +1,13 @@
-# Dummy Banking RAG Lab
+# Banking RAG Lab
 
-Safe sample retrieval project for indexing OpenAPI specs and answering simple questions over them with local keyword search.
+Minimal public-safe retrieval project for indexing OpenAPI specs and querying them with local keyword-based search.
 
-## What It Does
+## Features
 
-- Parses dummy OpenAPI specs
-- Builds lightweight text chunks
-- Stores a local JSON index
-- Retrieves top matching chunks for a query
+- Reads OpenAPI YAML files from a directory
+- Builds lightweight operation-level chunks
+- Writes a portable JSON index
+- Retrieves matching operations for natural-language queries
 
 ## Quick Start
 
@@ -16,11 +16,23 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 PYTHONPATH=src python -m rag_lab.index examples --output rag_index.json
-PYTHONPATH=src python -m rag_lab.query rag_index.json \"How do I create a payment?\"
+PYTHONPATH=src python -m rag_lab.query rag_index.json "How do I create a payment?"
 ```
 
-## Notes
+## Run Tests
 
-- No vector database is required
-- No external APIs are called
-- Only dummy example specs are included
+```bash
+PYTHONPATH=src python3 -m pytest -q
+```
+
+## Project Layout
+
+- `src/rag_lab`: indexing and query modules
+- `examples/`: neutral sample OpenAPI documents
+- `tests/`: unit tests for indexing and retrieval
+
+## Safety
+
+- Uses only dummy sample specs
+- Does not call external APIs
+- Does not require a vector database or credentials
