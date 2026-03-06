@@ -1,5 +1,9 @@
 # Banking RAG Lab
 
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 Minimal public-safe retrieval project for indexing OpenAPI specs and querying them with local keyword-based search.
 
 ## Features
@@ -24,6 +28,10 @@ PYTHONPATH=src python -m rag_lab.query rag_index.json "How do I create a payment
 ```bash
 PYTHONPATH=src python3 -m pytest -q
 ```
+
+## Demo
+
+This repo is designed as a lightweight retrieval demo. Build a JSON index from the sample specs, run a query such as `"How do I create a payment?"`, and review the ranked operation matches.
 
 ## Project Layout
 
