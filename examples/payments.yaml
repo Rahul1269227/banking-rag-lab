@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Sample Payments API
+  version: 1.0.0
+paths:
+  /payments:
+    post:
+      operationId: initiatePayment
+      description: Create a new payment instruction.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: number
+                currency:
+                  type: string
+                creditorAccount:
+                  type: string
+      responses:
+        "201":
+          description: Payment accepted
+  /payments/{paymentId}:
+    get:
+      operationId: retrievePayment
+      description: Retrieve payment details by identifier.
+      responses:
+        "200":
+          description: Payment details returned

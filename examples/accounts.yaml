@@ -1,0 +1,19 @@
+openapi: 3.0.3
+info:
+  title: Sample Accounts API
+  version: 1.0.0
+paths:
+  /accounts:
+    get:
+      operationId: listAccounts
+      description: List available customer accounts.
+      responses:
+        "200":
+          description: Accounts returned
+  /accounts/{accountId}/balances:
+    get:
+      operationId: retrieveBalances
+      description: Retrieve posted and available balances.
+      responses:
+        "200":
+          description: Balances returned
